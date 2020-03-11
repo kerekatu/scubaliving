@@ -35,8 +35,7 @@ module.exports = {
   output: {
     // __dirname targets root path of the project
     path: path.join(__dirname, 'public'),
-    filename: 'app.js',
-    publicPath: '/'
+    filename: 'bundle.js'
   },
   // PLUGINS
   plugins: [new WebpackBar()]

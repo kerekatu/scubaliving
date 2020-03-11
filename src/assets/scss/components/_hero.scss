@@ -1,0 +1,9 @@
+.hero {
+  display: block;
+
+  &__img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+}

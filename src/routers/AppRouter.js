@@ -1,16 +1,21 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch } from 'react-router-dom'
 
-// PAGES
+// CONTAINERS
+import Header from '../containers/Header/Header'
+import Footer from '../containers/Footer/Footer'
 
-const AppRouter = () => {
-  return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component="" />
-      </Switch>
-    </Router>
-  )
-}
+// ROUTES
+import Routes from './Routes'
+
+const AppRouter = () => (
+  <Router>
+    <Header />
+    <Switch>
+      <Routes />
+    </Switch>
+    <Footer />
+  </Router>
+)
 
 export default AppRouter

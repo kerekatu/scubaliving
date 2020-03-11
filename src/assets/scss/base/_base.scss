@@ -17,6 +17,16 @@ button:disabled {
   cursor: initial;
 }
 
+img {
+  pointer-events: none;
+}
+
+input,
+textarea,
+button {
+  font-family: $font-family;
+}
+
 html {
   font-size: 62.5%; // 1px = 0.1rem
   box-sizing: border-box;
@@ -24,5 +34,17 @@ html {
 
 body {
   min-height: 100vh;
-  font-size: 1.6rem;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-family: $font-family;
+  font-weight: 400;
+}
+
+#app {
+  display: grid;
+  grid-template-rows: 7rem 1fr max-content;
+}
+
+.container {
+  display: grid;
 }
