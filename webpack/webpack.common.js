@@ -34,7 +34,7 @@ module.exports = {
   // OUTPUT
   output: {
     // __dirname targets root path of the project
-    path: path.join(__dirname, 'public'),
+    path: path.join(__dirname, '../public'),
     filename: 'bundle.js'
   },
   // PLUGINS
