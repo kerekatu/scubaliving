@@ -1,0 +1,13 @@
+.sub.container {
+  margin: $space-xxl 0 $space-xl 0;
+
+  @include respond(phone) {
+    margin: 20rem 0 $space-xl 0;
+  }
+}
+
+.sub > .equipment > .link,
+.sub > .trips > .link,
+.sub > .courses > .link {
+  display: none;
+}

@@ -1,0 +1,35 @@
+.regular {
+  font-weight: 400;
+}
+
+.bold  {
+  font-weight: 700;
+}
+
+.line {
+  border: 0.1rem solid $color-gray;
+  margin-bottom: $space-m;
+}
+
+.notfound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.section {
+  padding: 0 $space-xxl;
+
+  @include respond(tab-land) {
+    padding: 0 $space-l;
+  }
+
+  & > p {
+    width: 60%;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+}

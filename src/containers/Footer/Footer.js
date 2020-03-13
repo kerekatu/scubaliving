@@ -1,7 +1,11 @@
 import React from 'react'
 
-const Footer = () => {
-  return <div></div>
-}
+import FooterNav from './FooterNav'
+
+const Footer = () => (
+  <footer className="footer">
+    <FooterNav />
+  </footer>
+)
 
 export default Footer

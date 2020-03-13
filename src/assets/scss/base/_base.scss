@@ -30,6 +30,14 @@ button {
 html {
   font-size: 62.5%; // 1px = 0.1rem
   box-sizing: border-box;
+
+  @include respond(tab-land) {
+    font-size: 50%;
+  }
+
+  @include respond(phone) {
+    font-size: 45%;
+  }
 }
 
 body {
@@ -42,9 +50,11 @@ body {
 
 #app {
   display: grid;
-  grid-template-rows: 7rem 1fr max-content;
+  grid-template-rows: 1fr max-content;
+  min-height: 100vh;
 }
 
 .container {
   display: grid;
+  margin-bottom: $space-xl;
 }

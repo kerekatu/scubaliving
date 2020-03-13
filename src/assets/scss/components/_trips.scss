@@ -1,0 +1,45 @@
+.trips {
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr));
+    gap: $space-xl;
+    margin-bottom: $space-xl;
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+    transition: opacity 0.2s ease-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    padding: $space-xl;
+
+    @include respond(phone) {
+      padding: 0;
+    }
+  }
+
+  &__text {
+    background-color: $color-black;
+    color: $color-white;
+    padding: $space-l;
+
+    & > .paragraph {
+      font-size: 1.2rem;
+    }
+  }
+}

@@ -8,10 +8,10 @@ import ContactPage from '../pages/ContactPage'
 import CoursesPage from '../pages/CoursesPage'
 import EquipmentPage from '../pages/EquipmentPage'
 import LoginPage from '../pages/LoginPage'
-import NotFoundPage from '../pages/NotFoundPage'
 import TripsPage from '../pages/TripsPage'
+import NotFoundPage from '../pages/NotFoundPage'
 
-const Routes = () => {
+const Routes = props => {
   const mainTitle = 'ScubaLiving -'
   const routes = [
     {
@@ -36,24 +36,34 @@ const Routes = () => {
       title: `${mainTitle} Courses`
     },
     {
+      path: '/courses/:courseId',
+      component: <CoursesPage />,
+      title: `${mainTitle} Course`
+    },
+    {
       path: '/equipment',
       component: <EquipmentPage />,
       title: `${mainTitle} Equipment`
     },
     {
-      path: '/login',
-      component: <LoginPage />,
-      title: `${mainTitle} Login`
-    },
-    {
-      path: '/notfound',
-      component: <NotFoundPage />,
-      title: `${mainTitle} NotFound`
+      path: '/equipment/:productId',
+      component: <EquipmentPage />,
+      title: `${mainTitle} Equipment`
     },
     {
       path: '/trips',
-      component: <TripsPage />,
+      component: <TripsPage {...props} />,
       title: `${mainTitle} Trips`
+    },
+    {
+      path: '/trips/:tripId',
+      component: <TripsPage {...props} />,
+      title: `${mainTitle} Trip`
+    },
+    {
+      path: '/login',
+      component: <LoginPage />,
+      title: `${mainTitle} Login`
     }
   ]
 

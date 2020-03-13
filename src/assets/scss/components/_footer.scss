@@ -1,0 +1,34 @@
+.footer {
+  background-color: $color-black;
+  padding: $space-xxl;
+
+  &__nav {
+    display: flex;
+    justify-content: space-around;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+  }
+
+  &__container {
+    align-self: flex-start;
+
+    @include respond(tab-port) {
+      margin-bottom: $space-l;
+    }
+
+    & > .heading-4 {
+      margin-bottom: $space-s;
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__link {
+    color: $color-white;
+    text-decoration: none;
+  }
+}

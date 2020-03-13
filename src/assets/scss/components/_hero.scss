@@ -1,9 +1,27 @@
 .hero {
   display: block;
+  height: 70rem;
 
   &__img {
     display: block;
     width: 100%;
     object-fit: cover;
+    object-position: center center;
+    height: inherit;
+  }
+
+  &__title {
+    background-color: rgba($color-white, 0.7);
+    padding: $space-l;
+    width: 60%;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+
+    @include respond(phone) {
+      width: 100%;
+    }
   }
 }

@@ -1,0 +1,50 @@
+.auth {
+  min-height: 100vh;
+  display: flex;
+
+  &__form {
+    margin: auto;
+    padding: $space-xl $space-xl;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+  }
+
+  &__label {
+    position: absolute;
+    top: 0.8rem;
+    left: $space-xs;
+    color: $color-black-light;
+    transition: all 0.1s ease-in-out;
+  }
+
+  &__input:focus + &__label {
+    top: -2.6rem;
+    left: 0;
+  }
+
+  &__input:valid + &__label {
+    top: -2rem;
+    left: 0;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0;
+    position: relative;
+  }
+
+  &__input {
+    background-color: $color-gray;
+    border: none;
+    padding: $space-s $space-xs;
+  }
+
+  &__btn {
+    width: 100%;
+    border: none;
+    background-color: $color-black-light;
+    color: $color-white;
+    padding: $space-s $space-xs;
+    font-weight: 700;
+  }
+}

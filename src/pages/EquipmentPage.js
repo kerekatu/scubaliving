@@ -1,7 +1,11 @@
 import React from 'react'
 
-const EquipmentPage = () => {
-  return <div></div>
-}
+import Equipment from '../components/Equipment/Equipment'
+
+const EquipmentPage = () => (
+  <main className="container sub">
+    <Equipment />
+  </main>
+)
 
 export default EquipmentPage

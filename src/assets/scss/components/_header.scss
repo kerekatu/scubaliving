@@ -12,17 +12,52 @@
     transform: translateY(-0.5rem);
   }
 
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    padding: $space-l 0;
+  }
+
+  &__link {
+    @include respond(phone) {
+      justify-self: center;
+      margin-bottom: $space-m;
+    }
+  }
+
   &__navbar {
     font-size: 2rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 100%;
+
+    @include respond(phone) {
+      justify-self: center;
+    }
   }
 
   &__list {
     display: flex;
     list-style: none;
+    margin-right: auto;
+
+    @include respond(tab-land) {
+      display: none;
+
+      &--collapsed {
+        display: flex !important;
+      }
+    }
+
+    &--collapsed {
+      display: none;
+      list-style: none;
+      margin-left: auto;
+      margin-right: $space-l;
+
+      @include respond(phone) {
+        margin-left: 0;
+      }
+    }
   }
 
   &__item {
@@ -39,12 +74,18 @@
 
   &__form {
     display: flex;
+    margin-right: $space-l;
+
+    @include respond(big-desktop) {
+      margin-right: auto;
+    }
   }
 
   &__input {
     &--search {
       background-color: $color-gray;
       border: 0.1rem solid $color-gray;
+      width: 25rem;
     }
   }
 
@@ -56,17 +97,19 @@
     }
 
     &--login {
-      padding: 0 $space-l 0 $space-s;
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: $base-font-size;
-      border: 0.1rem solid $color-gray;
-      background-color: $color-gray;
-      height: 3rem;
-    }
-
-    &-container {
       display: flex;
+      align-items: center;
+      background-color: $color-gray;
+      text-decoration: none;
+      height: 3rem;
+
+      & > span {
+        font-weight: 700;
+        padding: 0 $space-l 0 $space-s;
+        font-size: $base-font-size;
+        color: $color-black;
+        text-transform: uppercase;
+      }
     }
   }
 
@@ -74,10 +117,49 @@
   &__btn--search {
     padding: 0 $space-m;
     height: 3rem;
+    display: none;
+
+    @include respond(big-desktop) {
+      display: block;
+    }
   }
 
   &__icon {
     height: 3rem;
-    background-color: $color-black;
+
+    &--lock {
+      background-color: $color-black;
+    }
+
+    &--search {
+      box-sizing: border-box;
+      position: relative;
+      display: block;
+      transform: scale(var(--ggs, 1));
+      width: 16px;
+      height: 16px;
+      border: 2px solid;
+      border-radius: 100%;
+      margin-left: -4px;
+      margin-top: -4px;
+
+      @include respond(big-desktop) {
+        display: none;
+      }
+    }
+
+    &--search::after {
+      content: '';
+      display: block;
+      box-sizing: border-box;
+      position: absolute;
+      border-radius: 3px;
+      width: 2px;
+      height: 8px;
+      background: currentColor;
+      transform: rotate(-45deg);
+      top: 10px;
+      left: 12px;
+    }
   }
 }

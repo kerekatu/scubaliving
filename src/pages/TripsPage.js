@@ -1,7 +1,11 @@
 import React from 'react'
 
-const TripsPage = () => {
-  return <div></div>
-}
+import Trips from '../components/Trips/Trips'
+
+const TripsPage = () => (
+  <main className="container sub">
+    <Trips />
+  </main>
+)
 
 export default TripsPage

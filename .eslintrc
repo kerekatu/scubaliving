@@ -28,7 +28,7 @@
   "rules": {
     "react/prop-types": 0,
     "no-console": "off",
-    "semi": "off",
+    "semi": 0,
     "jsx-a11y/no-onchange": 0,
     "jsx-a11y/mouse-events-have-key-events": 0,
     "react-hooks/rules-of-hooks": "error",

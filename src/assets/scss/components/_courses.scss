@@ -1,0 +1,38 @@
+.courses {
+  &__cards {
+    margin-bottom: $space-xl;
+  }
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $space-xxl $space-xl;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+    border: 0.1rem solid $color-black;
+    text-decoration: none;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+  }
+
+  &__text {
+    color: $color-black;
+    margin-right: $space-xxl;
+
+    @include respond(tab-port) {
+      margin-bottom: $space-xl;
+      margin-right: 0;
+    }
+
+    & > .paragraph {
+      font-size: 1.4rem;
+    }
+  }
+}

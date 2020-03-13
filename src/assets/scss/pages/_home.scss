@@ -1,3 +1,14 @@
 .home {
-  grid-template-rows: 70rem 1fr;
+  grid-template-rows: repeat(4, max-content);
+  gap: $space-xl 0;
+}
+
+.equipment,
+.trips,
+.courses {
+  padding: 0 $space-xxl;
+
+  @include respond(tab-land) {
+    padding: 0 $space-l;
+  }
 }
